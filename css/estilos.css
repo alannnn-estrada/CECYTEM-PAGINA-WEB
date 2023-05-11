@@ -1,0 +1,257 @@
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0px;
+}
+::selection{
+    color: #ddd;
+    background-color: black;
+}
+/* *Establecer el tamaño y posicionamiento de los elementos */
+.container {
+    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* *Establecer un ancho mínimo para los elementos */
+.container {
+    min-width: 300px;
+}
+.item {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+}
+
+/**SCROLL*/
+.scroll{
+    position: fixed;
+    left: 0px; top: 0px;
+    width: 0px; height: 0px;
+    background: #13a53fc0;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+/**NAV*/
+.logo{
+    font-family: 'Times New Roman', Times, serif;
+    color: #ddd;
+    font-size:16px;
+    font-weight:bold;
+}
+
+nav ul{
+    background-color: #026402;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    list-style: none;
+}
+nav a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+nav ul:hover a{
+    border-radius: 5px;
+    color: #fff5f5;
+}
+
+nav a:hover {
+    color: black;
+    border-radius: 5px;
+}
+nav ul:hover a:hover{
+    box-shadow: 0 2px 0 0 currentcolor;
+    color: #04f017;
+}
+
+nav img {
+    width: 120px;
+    margin: 25px;
+}
+
+/**Header*/
+header h1{
+    margin-top: 50px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+/***Section*/
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section div{
+    margin-top: 10px;
+}
+p{
+    text-align: center;
+}
+section div .img-fija {
+    margin-top: 20px;
+    width: 500px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+section div .img-slider{
+    width: 500px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+section div ul{
+    margin-top: 10px;
+}
+#boton-imagenes{
+    margin-bottom: 20px;
+}
+
+section div div table{
+    margin: auto;
+    width: 70%;
+    margin-bottom: 20px;
+}
+section div h2{
+    margin-bottom: 20px;
+}
+
+
+.btn-Print {
+    background: purple;
+    border: 0px;
+    border-radius: 5px;
+    padding: 14px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/***Footer*/
+footer {
+    padding: 20px;
+    text-align: center;
+    background: darkgreen;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/**Propiedades COLOR O BACKGROUND PARA EL HTML*/
+.text-center {
+    text-align: center;
+}
+.color-1 {
+    color: purple;
+}
+
+.color-cursante {
+    color: red;
+}
+.activo {
+    background: mediumseagreen;
+    color: black;
+    border-radius: 5px;
+}
+
+.link:hover {
+    color: gold;
+}
+
+.btn-img {
+    background: transparent;
+    border: 0px;
+    font-weight: bolder;
+}
+
+.badge {
+    background-color: green;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/**Adaptaciones a dispositivos*/
+
+
+@media(max-width:1171px) and (min-width:1000px){
+    .logo{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 863px) {
+    .container {
+        flex-basis: 50%;
+    }
+        nav img {
+            display: block;
+            margin: auto;
+        }
+    
+        .logo {
+            text-align: center;
+            margin: 15px;
+        }
+    
+        nav ul{
+            flex-direction: column;
+            align-items: stretch;
+            text-align: center;
+            padding: 5px;
+        }
+    
+        nav a {
+            padding: 10px;
+            font-size: 18px;
+        }
+        nav ul li{
+            padding: 14px 16px;
+        }
+        header video {
+            width: 370px;
+            height: auto;
+        }
+
+        section div .img-fija {
+            width: 370px;
+            height: auto;
+        }
+
+        section div .img-slider {
+            width: 370px;
+            height: auto;
+        }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-basis: 100%;
+    }
+    header video{
+        width: 270px;
+        height: auto;
+    }
+
+   section div .img-fija {
+       width: 270px;
+       height: auto;
+   }
+   section div .img-slider {
+       width: 270px;
+       height: auto;
+   }
+}

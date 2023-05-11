@@ -1,0 +1,60 @@
+.general {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+.perfil {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background: #f1f1f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.perfil img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.perfil p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.link {
+    text-decoration: none;
+    color: #026402;
+}
+.link1:hover{
+    color: #04f017;
+}
+button{
+    background-color: #056908;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover{
+    background: #04f017;
+}
+
+
+@media screen and (max-width: 863px){
+    footer {
+        position: unset;
+        width: unset;
+    }
+}
+

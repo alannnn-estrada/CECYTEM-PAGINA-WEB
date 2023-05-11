@@ -1,0 +1,162 @@
+*{
+     font-family: 'Times New Roman', Times, serif;
+     margin: 0px;
+     padding: 0px;
+ }
+
+ ::selection {
+     color: #ddd;
+     background-color: black;
+ }
+
+ /* *Establecer el tamaño y posicionamiento de los elementos */
+ .container {
+
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+
+ /* *Establecer un ancho mínimo para los elementos */
+ .container {
+     min-width: 300px;
+ }
+
+ .item {
+     flex-basis: calc(33.33% - 20px);
+     margin: 10px;
+ }
+
+ /**SCROLL*/
+ .scroll {
+     position: fixed;
+     left: 0px;
+     top: 0px;
+     width: 0px;
+     height: 0px;
+     background: #13a53fc0;
+     padding: 5px;
+     border-radius: 8px;
+ }
+
+ /**NAV*/
+ .logo {
+     font-family: 'Times New Roman', Times, serif;
+     color: #ddd;
+     font-size: 16px;
+     font-weight: bold;
+ }
+
+ nav ul {
+     background-color: #026402;
+     overflow: hidden;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 5px;
+     list-style: none;
+ }
+
+ nav a {
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 15px;
+     font-weight: bold;
+ }
+
+ nav ul:hover a {
+     border-radius: 5px;
+     color: #fff5f5;
+ }
+
+ nav a:hover {
+     color: black;
+     border-radius: 5px;
+ }
+
+ nav ul:hover a:hover {
+     box-shadow: 0 2px 0 0 currentcolor;
+     color: #04f017;
+ }
+
+ nav .imgs {
+    width: 120px;
+    margin: 25px;
+ }
+ nav .imgs{
+    height: unset;
+    width: 120px;
+ }
+.perfil-nav{
+    all: unset;
+}
+.perfil-nav:hover{
+    all: unset;
+}
+#foto{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ footer {
+    padding: 20px;
+    text-align: center;
+    background: darkgreen;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link:hover {
+    color: gold;
+}
+
+
+@media(max-width:1171px) and (min-width:768px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 863px) {
+    .container {
+        flex-basis: 50%;
+    }
+
+    nav .imgs {
+        display: block;
+        margin: auto;
+    }
+
+    .logo {
+        text-align: center;
+        margin: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 5px;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    nav ul li {
+        padding: 14px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-basis: 100%;
+    }
+}

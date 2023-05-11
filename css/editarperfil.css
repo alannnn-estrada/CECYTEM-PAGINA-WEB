@@ -1,0 +1,124 @@
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"] {
+    background-color: #056908;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/**FORM2*/
+input[type="tel"]:valid {
+    border-color: green;
+}
+
+input[type="tel"]:invalid {
+    border-block: red;
+}
+
+input[type="text"],
+input[type="number"] input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input[type="file"] {
+    background-color: #056908;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="file"]:hover {
+    background-color: #45a049;
+}
+
+.btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
+
+
+.imagen{
+    width: auto;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#contenidop {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#contenidop p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#u-img {
+    border-radius: 50%;
+    margin: auto;
+}

@@ -1,0 +1,111 @@
+.contenedor-aside{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+}
+aside{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	text-align: center;
+}
+
+#izq{
+	box-shadow: 10px 10px 5px #356336;
+	width: 33%;
+	padding: 20px;
+	border-radius: 5px;
+}
+.carrusel{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	margin-bottom: 70px;
+}
+#der{
+	box-shadow: 10px 10px 10px  #356336;
+	width: 33%;
+	text-align: center;
+	border-radius: 5px;
+	padding: 25px;
+}
+#der h3{
+	margin-top: 10px;
+}
+#logosR{
+	width: 40px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 15px;
+	margin-top: -5px;
+}
+#derr{
+	
+	width: 50%;
+	box-shadow: 10px 10px 10px #356336;
+}
+#derr h1, h3{
+	margin-bottom: 10px;
+}
+#derr iframe{
+	margin: auto;
+	width: 500px; 
+	height: 278px;
+}
+#izqq{
+	padding: 20px;
+	width: 50%;
+	box-shadow: 10px 10px 10px #356336;
+	margin-bottom: 10px;
+}
+#izqq h1,h3 {
+	margin-bottom: 15px;
+}
+
+.logosT{
+	width: 50px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 15px;
+	margin-top: -5px;
+}
+section{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	flex-wrap: wrap
+}
+section h1, section h2{
+	text-align: center;
+}
+.linkss{
+	color: rgb(87, 170, 87);
+}
+.linkss:hover{
+	color: rgb(111, 221, 101);
+}
+
+@media (max-width:1408px){
+	.contenedor-aside{
+		flex-direction: column;
+	}
+	.carrusel{
+		margin-top: 15px;
+		margin-bottom: 30px
+	}
+	#izq, #der, #izqq, #derr{
+		width: 80%;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	#der{
+		margin-top: 50px;
+	}
+}

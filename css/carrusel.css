@@ -1,0 +1,155 @@
+.icon-cards {
+    position: relative;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    margin: 0;
+    color: white;
+    perspective: 1000px;
+    transform-origin: center;
+}
+
+.icon-cards__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60vw;
+    height: 40vw;
+    max-width: 480px;
+    max-height: 300px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+    border-radius: 6px;
+    transform-origin: center;
+}
+
+.icon-cards__item:nth-child(1) {
+    background-image: url("../img/historia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(0) translateZ(35vw);
+}
+
+.icon-cards__item:nth-child(2) {
+    background-image: url("../img/carreras.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(90deg) translateZ(35vw);
+}
+
+.icon-cards__item:nth-child(3) {
+    background-image: url("../img/administrativo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg) translateZ(35vw);
+}
+.icon-cards__item:nth-child(4) {
+    background-image: url("../img/comunidad.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(270deg) translateZ(35vw);
+}
+
+
+.icon-cards__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: translateZ(-30vw) rotateY(0);
+    animation: carousel 19s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+
+    
+}
+.icon-cards__content .step-animation {
+    animation: carousel 15s infinite steps(1) forwards;
+}
+
+@keyframes carousel {
+    0%,
+    25% {
+        transform: translateZ(-35vw) rotateY(0);
+    }
+
+    25%,
+    50% {
+        transform: translateZ(-35vw) rotateY(-90deg);
+    }
+
+    50%,
+    75% {
+        transform: translateZ(-35vw) rotateY(-180deg);
+    }
+
+    75%,
+    100% {
+        transform: translateZ(-35vw) rotateY(-270deg);
+    }
+
+    to {
+        transform: translateZ(-35vw) rotateY(-360deg);
+    }
+}
+
+
+
+
+
+// Jelly checkbox animation
+
+@keyframes jelly {
+    from {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.25, 0.75);
+    }
+
+    40% {
+        transform: scale(0.75, 1.25);
+    }
+
+    50% {
+        transform: scale(1.15, 0.85);
+    }
+
+    65% {
+        transform: scale(0.95, 1.05);
+    }
+
+    75% {
+        transform: scale(1.05, 0.95);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background: black;
+    border-radius: 5px;
+    padding: 3px;
+}
