@@ -27,7 +27,7 @@
                 if(isset($_SESSION['id'])) { // si el usuario ha iniciado sesión
                     echo '
                         <li><a class="perfil-nav" href="verperfil"><img id="foto" src="'.$_SESSION['imagen'].'"></img></a></li>
-                        <li><a id="nombre" href="editarperfil">'.$_SESSION['nombre'].'</a></li>
+                        <li><a id="nombre" href="editarperfil">'.$_SESSION['rol'].': '.$_SESSION['nombre'].'</a></li>
                     ';
                 } else { // si el usuario no ha iniciado sesión
                     echo '

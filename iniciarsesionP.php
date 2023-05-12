@@ -62,7 +62,7 @@ if (!empty($email) && !empty($password)) {
 
             include('session.php');
             echo "<script>alert('Redirigiendo....'); setTimeout(function() {
-                    window.location.href = 'comunidad.php';
+                    window.location.href = 'index.php';
                 }, 2000);</script>";
             exit();
         } else {

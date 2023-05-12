@@ -160,3 +160,10 @@
         flex-basis: 100%;
     }
 }
+
+@media (max-height:864px){
+    footer{
+        position: unset;
+        position: relative;;
+    }
+}

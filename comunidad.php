@@ -56,7 +56,7 @@ if (isset($_POST['publicar'])) {
                     // Mover la imagen a la carpeta de imágenes del servidor
                     $ruta_imagenp = 'upload/' . $nombre_imagenp;
                     if (move_uploaded_file($temp_imagenp, $ruta_imagenp)) {
-                        echo "La imagen se ha subido correctamente. Ruta: " . $ruta_imagenp;
+                        
                     } else {
                         echo "Ha ocurrido un error al subir la imagen. Por favor inténtelo de nuevo.";
                         exit();
@@ -77,11 +77,10 @@ if (isset($_POST['publicar'])) {
             }
 
             // Mostrar la imagen en la página
-            echo '<img src="' . $ruta_imagenp . '" alt="Imagen subida">';
         }
 
         if (!validar_textarea($contenido)) {
-            $error = "<p>El contenido del textarea solo puede contener letras, números y espacios.</p>";
+            $error = "El contenido del textarea solo puede contener letras, números y espacios.s";
         }else{
             // Preparar la consulta SQL
             $query = "INSERT INTO publicaciones (titulo, contenido, imagen, autor_id) VALUES ( ?, ?, ?, ?)";

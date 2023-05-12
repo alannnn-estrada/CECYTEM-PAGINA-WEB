@@ -6,14 +6,16 @@ var css = `
               position: fixed;
               position:relative;
               bottom: 0;
-              width:100%;
         }
         @media (min-height:940px) {
             footer {
               position: fixed;
               bottom: 0;
+              width: 100%;
             }
         }
+        @media screen and (max-width: 925px){footer{position:relative; width:unset;}}
+        @media screen and (max-height: 332px){footer{position:relative; width:unset;}}
         @media (max-height:924px) and (max-width:863px){footer{position:relative; width:unset;}}
         @media (min-height:925px) and (max-width: 925px){.DIV1{margin-button: 40px;} footer{position:fixed; width:unset;}}
         `;
@@ -64,15 +66,6 @@ USER_TYPE.addEventListener("change", (event)=>{
         </form>
         <button onclick="OContraseña()"><span class="badge-O">¿Olvidaste tu contraseña?</span></button>
         `;
-    }else if(OPTION_SELECT === 'none'){
-        FORM.innerHTML=`<center><label>Selecciona una opción</label></center>`;
-        var css = `
-        footer {
-              position: fixed;
-              bottom: 0;
-            }
-        `;
-        style.innerHTML = css;
     }
     
 });
@@ -126,19 +119,6 @@ function registro(){
 };
 
 function OContraseña(){
-    var css = `
-    .ask{
-        display: none;
-    }
-    footer {
-      position: fixed;
-      bottom: 0;
-    }
-    @media screen and (max-height:924px){footer{position:unset; position:relative;}}
-    @media (min-height:924px) and (max-width: 925px){.DIV1{margin-button: 40px;} footer{position:fixed;}}
-    `;
-    style.innerHTML = css;
-
     FORM.innerHTML=`
     <h1 class="OC">Olvidé mi contraseña</h1>
     <form id="password-recovery" method="POST" action="reset_password.php" id="forgot-password-form">
@@ -146,6 +126,18 @@ function OContraseña(){
       <input type="email" id="email" name="email" required>
       <button type="submit">Restablecer contraseña</button>
     </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     `;
 };
 
