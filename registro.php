@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="./css/inicioss.css">
 </head>
 <body>
+    <?php include('head-nav.php');?>
     <div class="container">
-        <?php include('head-nav.php');?>
-        <div class="DIV1">
-            <div class="DIV1 ask">
+        <div class="DIV1 col-12">
+            <div class="DIV1 ask mt-2">
                 <h1>Bienvenido, seleccione su tipo de usuario</h1>
                 <label for="user-type">Selecciona tu tipo de usuario:</label>
                 <select id="user-type">
@@ -22,10 +22,12 @@
                     <option value="Profesor">Profesor</option>
                 </select>
             </div>
-            <div id="FORM"></div>
+            <div id="FORM" class="mt-3"></div>
         </div>
-        <?php include('footer.php');?>
     </div>
+    <footer class="fixed-bottom">
+        <?php include('footer.php');?>
+    </footer>
     <script src="./js/iniciarsesion.js"></script>
 </body>
 </html>

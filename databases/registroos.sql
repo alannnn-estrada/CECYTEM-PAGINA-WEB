@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-05-2023 a las 05:58:13
+-- Tiempo de generación: 09-05-2023 a las 01:58:08
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 7.4.33
 
@@ -35,38 +35,6 @@ CREATE TABLE `comentarios` (
   `publicacion_id` int UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `comentarios`
---
-
-INSERT INTO `comentarios` (`id`, `contenido`, `fecha`, `autor_id`, `publicacion_id`) VALUES
-(38, 'Hola', '2023-05-26 03:11:29', 14, 11),
-(39, 'Hola', '2023-05-26 23:21:31', 14, 16);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `formulario`
---
-
-CREATE TABLE `formulario` (
-  `id` int UNSIGNED NOT NULL,
-  `id_usuario` int UNSIGNED NOT NULL,
-  `preguntas_respondidas` text COLLATE utf8mb4_general_ci NOT NULL,
-  `preguntas_correctas` int UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `formulario`
---
-
-INSERT INTO `formulario` (`id`, `id_usuario`, `preguntas_respondidas`, `preguntas_correctas`) VALUES
-(1, 13, '7', 4),
-(2, 13, '7', 3),
-(3, 13, '7', 5),
-(4, 13, '7', 6),
-(5, 13, '7', 3);
-
 -- --------------------------------------------------------
 
 --
@@ -87,8 +55,7 @@ CREATE TABLE `publicaciones` (
 --
 
 INSERT INTO `publicaciones` (`id`, `titulo`, `contenido`, `imagen`, `fecha`, `autor_id`) VALUES
-(11, 'LA PRIMERA PUBLICACION OFICIAL', 'BIENVENIDO A LA COMUNIDAD DE CECYTEM IXTAPALUCA II', 'upload/645896d719194.jpg', '2023-05-08 06:29:43', 14),
-(16, 'Hola', 'Hola alumno del cecytem', '', '2023-05-26 23:21:21', 14);
+(11, 'LA PRIMERA PUBLICACION OFICIAL', 'BIENVENIDO A LA COMUNIDAD DE CECYTEM IXTAPALUCA II', 'upload/645896d719194.jpg', '2023-05-08 06:29:43', 14);
 
 -- --------------------------------------------------------
 
@@ -103,14 +70,6 @@ CREATE TABLE `respuestas` (
   `autor_id` int UNSIGNED NOT NULL,
   `comentario_id` int UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `respuestas`
---
-
-INSERT INTO `respuestas` (`id`, `respuesta`, `fecha`, `autor_id`, `comentario_id`) VALUES
-(24, 'Hola', '2023-05-26 03:11:40', 14, 38),
-(25, 'Holaaa', '2023-05-26 23:21:42', 14, 39);
 
 -- --------------------------------------------------------
 
@@ -141,9 +100,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `rol`, `nombre`, `numero_control`, `cedula`, `municipio`, `numero`, `correo`, `fecha_nacimiento`, `codigo_postal`, `curp`, `contrasena`, `fecha_registro`, `imagen`, `token`) VALUES
-(13, 'Estudiante', 'ALAN JAVIER ESTRADA MONROY', '12345678912165', '0', 'ASDA123', '5619383638', 'alanjavierestradamonroy@gmail.com', '2003-01-03', '56589', 'ALANJAVIERESTRAD', '$2y$10$akRbfvKyYMN.r/BV2Ls60.oNvwhPTk1en.tUzNZ7cREkNJvM5ZdHK', '2023-05-05 21:54:36', './upload/twitter.png', '64711b4fddda4'),
-(14, 'Admin', 'ADMIN', 'ADMIN', '12345678', 'ADMIN', '5619383638', 'alanjavierestradamonroy@outlook.es', '2023-05-07', '56530', 'ADMINADMINADMINA', '$2y$10$fhlIV8nH8K29ahOdS2fhFutMDtNnsB4OIWNjreNyxeH9ZzyEyfWYC', '2023-05-08 04:32:46', './upload/image (1).png', ''),
-(15, 'Profesor', 'JOEL ALEXANDER MORALES HERNANDEZ', '12345678912344', '', 'IXTAPALUCA', '5511223344', 'correodeprueba.enterprise@gmail.com', '2006-03-03', '56530', 'JURJ061010MDFRYM', '$2y$10$lsXrIS15yDlgsBoY2viIWutScZJZwdvl1l6LuuhNWGksUKU3ug1RG', '2023-05-27 04:42:29', 'upload/image (2).png', '');
+(13, 'Estudiante', 'ALAN JAVIER ESTRADA MONROY', '12345678912165', '0', 'ASDA123', '5619383638', 'alanjavierestradamonroy@gmail.com', '2003-01-03', '56589', 'ALANJAVIERESTRAD', '$2y$10$VYebFMOXAihnwILFy3ZrLumFEg/qw91KFkIjF33k/7E6D6MDPUfR2', '2023-05-05 21:54:36', './upload/twitter.png', '64598f2e7e8c5'),
+(14, 'Profesor', 'ADMIN', 'ADMIN', '1', 'ADMIN', 'ADMIN', 'alanjavierestradamonroy@outlook.es', '2023-05-07', 'ADMIN', 'ADMIN', '$2y$10$fhlIV8nH8K29ahOdS2fhFutMDtNnsB4OIWNjreNyxeH9ZzyEyfWYC', '2023-05-08 04:32:46', 'upload/XDFOTO.jpg', '');
 
 --
 -- Índices para tablas volcadas
@@ -156,13 +114,6 @@ ALTER TABLE `comentarios`
   ADD PRIMARY KEY (`id`),
   ADD KEY `autor_id` (`autor_id`),
   ADD KEY `publicacion_id` (`publicacion_id`);
-
---
--- Indices de la tabla `formulario`
---
-ALTER TABLE `formulario`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- Indices de la tabla `publicaciones`
@@ -193,31 +144,25 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT de la tabla `formulario`
---
-ALTER TABLE `formulario`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `respuestas`
 --
 ALTER TABLE `respuestas`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
@@ -229,12 +174,6 @@ ALTER TABLE `usuarios`
 ALTER TABLE `comentarios`
   ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`autor_id`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `comentarios_ibfk_3` FOREIGN KEY (`publicacion_id`) REFERENCES `publicaciones` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `formulario`
---
-ALTER TABLE `formulario`
-  ADD CONSTRAINT `formulario_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);
 
 --
 -- Filtros para la tabla `respuestas`

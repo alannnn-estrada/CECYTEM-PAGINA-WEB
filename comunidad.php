@@ -17,10 +17,11 @@ function validar_textarea($texto) {
     return true;
 }
 
+$rol = $_SESSION['rol'];
 // Establecer la conexión a la base de datos
 // Procesar el formulario de publicación solo para profesores
 if (isset($_POST['publicar'])) {
-    if ($rol == 'Profesor') {
+    if ($rol == 'Admin' || $rol == 'Profesor') {
         $titulo = limpiar_entrada($_POST['titulo']);
         $contenido = limpiar_entrada($_POST['contenido']);
 
@@ -174,7 +175,7 @@ if (isset($_POST['publicar_respuesta'])) {
 // Obtener todas las publicaciones de la base de datos
 $sql = "SELECT p.*, u.nombre as nombre_autor
 FROM publicaciones p
-JOIN usuarios u ON p.autor_id = u.id ORDER BY fecha ASC";
+JOIN usuarios u ON p.autor_id = u.id ORDER BY fecha DESC";
 $resultado = mysqli_query($conn, $sql);
 /*if (!$resultado) {
     die("Error en la consulta SQL: " . mysqli_error($conn));
@@ -205,7 +206,7 @@ $resultado_respuestas = mysqli_query($conn, $sql_respuestas);
 <div class="comunidad">
     <h1>Comunidad CECYTEM</h1>
 
-    <?php if(isset($_SESSION['id']) && $_SESSION['rol'] == 'Profesor'): ?>
+    <?php if(isset($_SESSION['id']) && $_SESSION['rol'] == 'Profesor' || $rol == 'Admin'): ?>
         <h2>Crear Publicación</h2>
         <?php if ($resultado_publicacion_eject = 'Se ha creado la publicacion con exito:D'): ?>
             <p style="color: green;"><?php echo $resultado_publicacion_eject; ?></p>
@@ -340,10 +341,6 @@ $resultado_respuestas = mysqli_query($conn, $sql_respuestas);
                                 <p style="color: green;"><?php echo $exito_comentario; ?></p>
                             <?php endif; ?>
                             <form method="POST">
-                                <div>
-                                    <label>Usuario:</label>
-                                    <input type="hidden" name="usuario" value="<?php echo $nombreUsuario; ?>" readonly>
-                                </div>
                                 <div>
                                     <label for="comentario">Respuesta:</label>
                                     <textarea name="comentario" pattern="^[0-9A-Za-z.,!?'\s]+$" required></textarea>

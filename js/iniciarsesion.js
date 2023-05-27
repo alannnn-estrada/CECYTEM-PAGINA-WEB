@@ -1,44 +1,25 @@
 const USER_TYPE =  document.getElementById('user-type');
 const FORM = document. getElementById('FORM');
 const FORM_REGISTRO = document.getElementById('FORM_REGISTRO');
-var css = `
-        footer {
-              position: fixed;
-              position:relative;
-              bottom: 0;
-        }
-        @media (min-height:940px) {
-            footer {
-              position: fixed;
-              bottom: 0;
-              width: 100%;
-            }
-        }
-        @media screen and (max-width: 925px){footer{position:relative; width:unset;}}
-        @media screen and (max-height: 332px){footer{position:relative; width:unset;}}
-        @media (max-height:924px) and (max-width:863px){footer{position:relative; width:unset;}}
-        @media (min-height:925px) and (max-width: 925px){.DIV1{margin-button: 40px;} footer{position:fixed; width:unset;}}
-        `;
-var style = document.createElement('style');
-style.innerHTML = css;
-document.head.appendChild(style);
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const footer = document.querySelector('footer');
+      footer.classList.add('fixed-bottom');
+    });
+
+    document.getElementById('user-type').addEventListener('change', function() {
+      const footer = document.querySelector('footer');
+      const userType = this.value;
+
+      if (userType === '' || userType === 'none') {
+        footer.classList.add('fixed-bottom');
+      } else {
+        footer.classList.remove('fixed-bottom');
+      }
+    });
+
 
 USER_TYPE.addEventListener("change", (event)=>{
-    var css = `
-        @media(max-height:925px){
-          footer {
-              position: unset;
-              position: relative;
-            }
-        }
-        
-        @media screen and (max-width: 863px) {
-            footer {
-              position: relative;
-            }
-        }
-        `;
-    style.innerHTML = css;
     const OPTION_SELECT = event.target.value;
     if (OPTION_SELECT=== 'Alumno'){
         FORM.innerHTML=`
@@ -50,8 +31,8 @@ USER_TYPE.addEventListener("change", (event)=>{
 	        <input type="password" id="contrasena" name="contrasena" required>
 	        <input type="submit" value="Iniciar sesión">
         </form>
-        <button onclick="OContraseña()"><span class="badge-O">¿Olvidaste tu contraseña?</span></button>
-        <button onclick="registro()">¿No tienes cuenta? <span class="badge"> Da click aqui</span></button>
+        <button onclick="OContraseña()"><span class="badges-O">¿Olvidaste tu contraseña?</span></button>
+        <button onclick="registro()">¿No tienes cuenta? <span class="badges"> Da click aqui</span></button>
         `;
     }else if (OPTION_SELECT === 'Profesor'){
         FORM.innerHTML=`
@@ -62,10 +43,14 @@ USER_TYPE.addEventListener("change", (event)=>{
 	        <label for="contrasena">Contraseña:</label>
 	        <input type="password" id="contrasena" name="contrasena" required>
 	        <input type="submit" value="Iniciar sesión">
-            <p>Si no tiene cuenta <span class="badge"> comunicate con nosotros!</span></p>
+            <p>Si no tiene cuenta <span class="badges"> comunicate con nosotros!</span></p>
         </form>
-        <button onclick="OContraseña()"><span class="badge-O">¿Olvidaste tu contraseña?</span></button>
+        <button onclick="OContraseña()"><span class="badges-O">¿Olvidaste tu contraseña?</span></button>
         `;
+    }else{
+        FORM.innerHTML=`
+        <h3>Seleccione una opcion para continuar :D</h3>
+        `
     }
     
 });

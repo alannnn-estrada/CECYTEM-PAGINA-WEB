@@ -63,25 +63,25 @@ if (!empty($email) && !empty($password)) {
             include('session.php');
             echo "<script>alert('Redirigiendo....'); setTimeout(function() {
                     window.location.href = 'index.php';
-                }, 2000);</script>";
+                }, 10);</script>";
             exit();
         } else {
             // La contraseña es incorrecta
             echo "<script>alert('La contraseña es incorrecta'); setTimeout(function() {
                     window.location.href = 'registro.php';
-                }, 2000);</script>";
+                }, 10);</script>";
         }
     } else {
         // El usuario no se encontró en la base de datos
         echo "<script>alert('Usuario no encontrado'); setTimeout(function() {
                     window.location.href = 'registro.php';
-                }, 2000);</script>";
+                }, 10);</script>";
     }
 } else {
     // El correo o la contraseña están vacíos
     echo "<script>alert('Ingrese corrreo o contraseña); setTimeout(function() {
                     window.location.href = 'registro.php';
-                }, 2000);</script>";
+                }, 10);</script>";
 }
 mysqli_close($conn);
 ?>

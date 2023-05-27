@@ -70,7 +70,9 @@ if ($uploadOk == 0) {
         $result = $stmt->get_result();
 
         if (mysqli_num_rows($result) > 0) {
-            echo "<script>alert('Ya existe un usuario con el mismo correo, número, número de control, cédula, CURP o nombre.')</script>";
+            echo "<script>alert('Ya existe un usuario con el mismo correo, número, número de control, cédula, CURP o nombre.'); setTimeout(function() {
+                    window.location.href = 'registro.php';
+                }, 000);</script>";
         } else {
             // Guarda la ubicación del archivo en la base de datos
             $imagen = "upload/" . htmlspecialchars(basename($_FILES["imagen"]["name"]));
@@ -89,7 +91,7 @@ if ($uploadOk == 0) {
                 
                 exit;
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                echo "Error: ";
             }
         }
     } else {

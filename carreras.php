@@ -4,39 +4,31 @@
 
 ?>
 <link rel="stylesheet" type="text/css" href="./css/carreras.css">
-<section>
-            <div>
-                <img src="./img/imagen1.jpg" alt="">
-                <h1>PROGRAMACIÓN</h1>
-                <p>La carrera de Programación tiene como objetivo formar expertos en los procesos involucrados en la creación y
-                optimización de los códigos que conforman los distintos softwares, como páginas web, aplicaciones, robots o paqueterías
-                como Microsoft Office.</p>
+<div class="container">
+    <div class="row">
+        <section class="row m-auto text-center mt-5">
+            <div class="col ">
+                <img src="./img/imagen1.jpg" alt="Programación">
+                <h4 class="mt-2"><a href="" class="link">PROGRAMACIÓN</a></h4>
+                <p>La carrera de Programación tiene como objetivo formar expertos en los procesos involucrados en la creación y optimización de los códigos que conforman los distintos softwares, como páginas web, aplicaciones, robots o paqueterías como Microsoft Office.</p>
             </div>
-            <div>
-                <img src="./img/imagen2.jpg" alt="">
-                <h1>CONSTRUCCIÓN</h1>
-                <p>Tiene la finalidad de satisfacer la demanda de personal calificado, para supervisar y controlar la construcción y
-                restauración de obras civiles privadas y públicas, aplicando las técnicas constructivas.</p>
+            <div class="col ">
+                <img src="./img/imagen2.jpg" alt="Construcción">
+                <h4 class="mt-2"><a href="" class="link">CONSTRUCCIÓN</a></h4>
+                <p>Tiene la finalidad de satisfacer la demanda de personal calificado, para supervisar y controlar la construcción y restauración de obras civiles privadas y públicas, aplicando las técnicas constructivas.</p>
             </div>
-            <div>
-                <img src="./img/imagen3.jpg" alt="">
-                <h1>ANIMACIÓN DIGITAL</h1>
-                <p>Es una profesión que mediante software especializado permite la creación, modelado y movimiento de imágenes, en formato
-                2D o recientemente en 3D.</p>
+            <div class="col ">
+                <img src="./img/imagen3.jpg" alt="Animación">
+                <h4 class="mt-2"><a href="" class="link">ANIMACIÓN DIGITAL</a></h4>
+                <p>Es una profesión que mediante software especializado permite la creación, modelado y movimiento de imágenes, en formato 2D o recientemente en 3D.</p>
             </div>
-            <br>
         </section>
-        <div>
-            <h1>
-				<marquee direction="left">Visita nuestras instalaciones!</marquee>
-			</h1>
+        <div class="row">
+            <h3 class="col-12">
+                <marquee direction="left">Visita nuestras instalaciones!</marquee>
+            </h3>
         </div>
-        <script type="text/javascript">
-            const scrolld = document.getElementById("SCROLLD");
-            window.addEventListener("scroll", () =>{
-              const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-              const scrolled = (scrollTop/(scrollHeight-clientHeight)*100);
-              scrolld.style.width = `${scrolled}%`;
-            });
-        </script>
+    </div>
+</div>
+
 <?php include('footer.php');?>
