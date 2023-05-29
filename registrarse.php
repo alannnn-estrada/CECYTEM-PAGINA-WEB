@@ -34,11 +34,6 @@ if(isset($_POST["submit"])) {
     }
 }
 
-// Verificar si el archivo ya existe
-if (file_exists($target_file)) {
-    $error .= "El archivo ya existe.<br>";
-    $uploadOk = 0;
-}
 
 // Verificar el tamaño máximo del archivo
 if ($_FILES["imagen"]["size"] > 500000) {
