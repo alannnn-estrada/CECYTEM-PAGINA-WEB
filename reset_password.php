@@ -11,8 +11,8 @@ try {
     $mail->isSMTP(); // Establece el uso de SMTP
     $mail->Host       = 'smtp.mail.yahoo.com'; // Servidor SMTP de tu proveedor de correo
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'enterpriseproyects@yahoo.com'; // Tu correo electrónico
-    $mail->Password   = 'lgdehbgrjkcqbgly'; // Tu contraseña
+    $mail->Username   = ''; // Tu correo electrónico
+    $mail->Password   = ''; // Tu contraseña
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Opcional: establece el tipo de cifrado
     $mail->Port       = 587;
 
