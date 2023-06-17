@@ -17,7 +17,7 @@ function validar_textarea($texto) {
     return true;
 }
 
-$rol = $_SESSION['rol'];
+
 // Establecer la conexión a la base de datos
 // Procesar el formulario de publicación solo para profesores
 if (isset($_POST['publicar'])) {

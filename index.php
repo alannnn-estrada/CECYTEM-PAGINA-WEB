@@ -14,6 +14,7 @@
 				<h5><a class="linkss" href="https://www.facebook.com/CecytemPlantelIxtapaluca2"><img id="logosR" src="img/facebook.png" alt="twiter link"><b id="txtlg">CECYTEM Plantel Ixtapaluca II</b></a></h5>
 			</aside>
 			<br>
+			
 			<div id="carouselExampleAutoplaying" class="carousel slide carousel-dark" data-bs-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
